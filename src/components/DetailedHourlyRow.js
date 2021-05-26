@@ -3,9 +3,7 @@ import HourlyRowCard from './HourlyRowCard';
 
 const DetailedHourlyRow = (props) => {
 
-  useEffect(() => {
-    console.log('dog')
-  }, [props.temp])
+  
   return (
     <div
       className="detailed-hourly"
