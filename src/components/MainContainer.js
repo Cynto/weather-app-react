@@ -3,11 +3,25 @@ import ReactDOM from 'react-dom';
 import NowPage from './NowPage';
 import HourlyPage from './HourlyPage';
 import DailyPage from './DailyPage';
+import DetailedDailyForecast from './DetailedDailyForecast'
 
 import { getWeatherStorage } from '/src/api/getWeather.js';
 
 const MainContainer = (props) => {
   const weatherObject = getWeatherStorage();
+
+  const getDetailedStats = (index) => {
+    const mainContainer = document.getElementById('main-container');
+
+    ReactDOM.render(
+      <DetailedDailyForecast
+        index={index}
+        temp={props.temp}
+        getDetailedStats={getDetailedStats}
+      />,
+      mainContainer,
+    );
+  };
 
   useEffect(() => {
     if (props.currentPage === 'now') {
@@ -17,6 +31,7 @@ const MainContainer = (props) => {
           temp={props.temp}
           location={props.location}
           setLocation={props.setLocation}
+          getDetailedStats={getDetailedStats}
         />,
         document.getElementById('main-container'),
       );
@@ -35,6 +50,7 @@ const MainContainer = (props) => {
           temp={props.temp}
           location={props.location}
           setLocation={props.setLocation}
+          getDetailedStats={getDetailedStats}
         />,
         document.getElementById('main-container'),
       );

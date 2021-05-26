@@ -20,7 +20,7 @@ const DailyRowCard = (props) => {
    setPop(Math.round(weatherObject.forecast[props.index].pop * 100))
   }, [props.temp])
   return (
-    <div className="daily-row">
+    <div className="daily-row" onClick={() => props.getDetailedStats(props.index)}>
       <div className="row-date-container">
         <p className="day-text">{format(add(new Date, {days: props.index}), 'E')}</p>
         <p className="date-text">{format(add(new Date, {days: props.index}), 'd/M')}</p>

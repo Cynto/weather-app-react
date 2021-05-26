@@ -40,7 +40,7 @@ const CurrentWeatherCard = (props) => {
     </div>
     <div className="spaced-content">
       <h3>{currentWeather}</h3>
-      <h2>MORE DETAILS -></h2>
+      <h2 onClick={props.getDetailedStats}>MORE DETAILS -></h2>
     </div>
   </div>)
   

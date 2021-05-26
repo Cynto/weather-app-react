@@ -74,13 +74,6 @@ const HourlyPage = (props) => {
     <div className="weather-container">
       {hourArray.map((item) => (
         <div className="outer-row-div" key={item} id={`outer-${item}`}>
-          <HourlyRowCard
-            key={item}
-            index={item}
-            rowClass={'daily-row'}
-            temp={props.temp}
-            detailedHourlyStatsFunction={detailedHourlyStatsFunction}
-          />{' '}
         </div>
       ))}
     </div>

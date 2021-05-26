@@ -19,7 +19,7 @@ const TodayForecastCard = (props) => {
     setRealfeel(Math.round(weatherObject.forecast[0].feels_like.day))
     setCurrentWeather(weatherObject.forecast[0].weather[0].main)
   }, [props.temp])
-
+ 
   return (
     <div className="today-forecast-div">
       <div className="card-header">
@@ -33,7 +33,7 @@ const TodayForecastCard = (props) => {
       <div className="real-feel">RealFeel {realfeel}°</div>
       <div className="spaced-content">
         <h3>{currentWeather}</h3>
-        <h2>MORE DETAILS -></h2>
+        <h2 onClick={() => props.getDetailedStats(0)}>MORE DETAILS -></h2>
       </div>
     </div>
   )

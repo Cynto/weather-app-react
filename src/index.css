@@ -451,6 +451,20 @@ form input:focus {
   font-weight: 400;
   color: rgb(0, 0, 0)
 }
+.detailed-temp-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 12px;
+}
+.realfeel-detailed {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+.weather-detailed {
+  width: 100%;
+  margin-bottom: 24px;
+}
 /* detailed hourly forceast*/
 
 .detailed-hourly {
