@@ -1,4 +1,4 @@
-# weather-app-react
+# Weather App
 
 This project is a remake of my other [project](https://github.com/Cynto/weather-app) this time using React.
 
@@ -8,5 +8,3 @@ This project is a remake of my other [project](https://github.com/Cynto/weather-
 
 - [React](https://reactjs.org/)
 - [date-fns](https://date-fns.org/)
-
-

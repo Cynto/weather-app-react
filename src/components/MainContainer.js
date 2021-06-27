@@ -16,9 +16,7 @@ const MainContainer = (props) => {
 
   const detailedArray = [0, 1, 2, 3, 4, 5, 6, 7];
 
-  useEffect(() => {
-    console.log(index);
-  }, [index]);
+  
 
   return (
     <div id="main-container">

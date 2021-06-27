@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import MainContainer from './components/MainContainer';
+import Footer from './components/Footer'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { getWeatherStorage } from './api/getWeather';
@@ -29,6 +30,7 @@ const App = () => {
           location={location}
           setLocation={setLocation}
         />
+        <Footer />
       </div>
     </Router>
   );
