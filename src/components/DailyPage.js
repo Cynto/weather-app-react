@@ -14,6 +14,8 @@ const DailyPage = (props) => {
           index={item}
           temp={props.temp}
           getDetailedStats={props.getDetailedStats}
+          setIndex={props.setIndex}
+          indexState={props.index}
         />
       ))}
     </div>

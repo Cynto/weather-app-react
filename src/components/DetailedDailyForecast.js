@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import DetailedDailyCard from './DetailedDailyCard'
+import DetailedDailyCard from './DetailedDailyCard';
+import { Link } from 'react-router-dom';
 
 import { format } from 'date-fns';
 import add from 'date-fns/add';
@@ -18,32 +19,36 @@ const DetailedDailyForecast = (props) => {
     } else if (props.index === 7) {
       setRightArrow('');
     } else {
-      setLeftArrow('fas fa-arrow-left')
-      setRightArrow('fas fa-arrow-right')
+      setLeftArrow('fas fa-arrow-left');
+      setRightArrow('fas fa-arrow-right');
     }
   }, [props.index]);
 
   return (
     <div>
       <div className="arrow-date-container">
-        <i
-          className={leftArrowClass}
-          onClick={() => props.getDetailedStats(props.index - 1)}
-        ></i>
+        <Link to={`/detailed-forecast-${props.index - 1}`}>
+          <i
+            className={leftArrowClass}
+            onClick={() => props.setIndex(props.index - 1)}
+          ></i>
+        </Link>
         <h3 className="detailed-date">
           {format(
             add(new Date(), { days: props.index }),
             'EEEE, MMMM d',
           ).toUpperCase()}
         </h3>
-        <i
-          className={rightArrowClass}
-          onClick={() =>
-            props.index != 7 ? props.getDetailedStats(props.index + 1) : ''
-          }
-        ></i>
+        <Link to={`/detailed-forecast-${props.index + 1}`}>
+          <i
+            className={rightArrowClass}
+            onClick={() =>
+              props.index != 7 ? props.setIndex(props.index + 1) : ''
+            }
+          ></i>
+        </Link>
       </div>
-      <DetailedDailyCard temp={props.temp} index={props.index}/>
+      <DetailedDailyCard temp={props.temp} index={props.index} />
     </div>
   );
 };

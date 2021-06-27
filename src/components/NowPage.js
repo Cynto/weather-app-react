@@ -8,19 +8,14 @@ import DetailedCurrentWeather from './DetailedCurrentWeather'
 import {getWeatherStorage} from '/src/api/getWeather.js'
 
 const NowPage = (props) => {
-
-  const getDetailedStats = (index) => {
-    const mainContainer = document.getElementById('main-container');
-    reactDOM.render(<DetailedCurrentWeather getDetailedStats={props.getDetailedStats}/>, mainContainer)
-  }
   
   useEffect(() => {
     
   }, [props.temp])
   return (
     <div>
-      <CurrentWeatherCard temp={props.temp} getDetailedStats={getDetailedStats}/>
-      <TodayForecastCard temp={props.temp} getDetailedStats={props.getDetailedStats}/>
+      <CurrentWeatherCard temp={props.temp} />
+      <TodayForecastCard temp={props.temp} />
     </div>
   )
 }

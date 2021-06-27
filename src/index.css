@@ -130,13 +130,23 @@ form input:focus {
   margin-bottom: 30px;
 
 }
+.nav-links {
+  display: flex;
+  height: 100%;
+  list-style: none;
+  
+}
 .navbar a {
+  text-decoration: none;
+}
+.navbar li {
   margin-left: 30px;
   height: 100%;
   display: flex;
   align-items: center;
   cursor: pointer;
   font-size: 15px;
+  
 }
 .navbar a:nth-child(1) {
   margin-left: 0px;
@@ -146,6 +156,8 @@ form input:focus {
 }
 .nav-link-focused {
   border-bottom: 1px solid orangered;
+  font-weight: bolder;
+  color: black
 }
 
 .current-weather-div {

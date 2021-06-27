@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import DetailedCurrentCard from './DetailedCurrentCard'
-
+import DetailedCurrentCard from './DetailedCurrentCard';
+import { Link } from 'react-router-dom';
 import { format } from 'date-fns';
 
 const DetailedCurrentWeather = (props) => {
@@ -11,7 +11,12 @@ const DetailedCurrentWeather = (props) => {
         <h3 className="detailed-date">
           {format(new Date(), 'EEEE, MMMM d').toUpperCase()}
         </h3>
-        <i className="fas fa-arrow-right" onClick={() => props.getDetailedStats(1)}></i>
+        <Link to="/detailed-forecast-1">
+          <i
+            className="fas fa-arrow-right"
+            onClick={() => props.setIndex(1)}
+          ></i>
+        </Link>
       </div>
       <DetailedCurrentCard />
     </div>
