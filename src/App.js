@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Navbar from './components/Navbar';
 import MainContainer from './components/MainContainer';
 import Footer from './components/Footer'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { getWeatherStorage } from './api/getWeather';
 
@@ -14,7 +14,7 @@ const App = () => {
   let [currentPage, setCurrentPage] = useState('now');
 
   return (
-    <Router>
+    <Router basename='/'>
       <div className="App">
         <Header
           temp={temp}

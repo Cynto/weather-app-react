@@ -27,7 +27,7 @@ const DetailedDailyForecast = (props) => {
   return (
     <div>
       <div className="arrow-date-container">
-        <Link to={`/detailed-forecast-${props.index - 1}`}>
+        <Link style={{color: 'black'}} to={`/detailed-forecast-${props.index - 1}`}>
           <i
             className={leftArrowClass}
             onClick={() => props.setIndex(props.index - 1)}
@@ -39,7 +39,7 @@ const DetailedDailyForecast = (props) => {
             'EEEE, MMMM d',
           ).toUpperCase()}
         </h3>
-        <Link to={`/detailed-forecast-${props.index + 1}`}>
+        <Link style={{color: 'black'}} to={`/detailed-forecast-${props.index + 1}`}>
           <i
             className={rightArrowClass}
             onClick={() =>

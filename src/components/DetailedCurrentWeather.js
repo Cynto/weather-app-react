@@ -11,7 +11,7 @@ const DetailedCurrentWeather = (props) => {
         <h3 className="detailed-date">
           {format(new Date(), 'EEEE, MMMM d').toUpperCase()}
         </h3>
-        <Link to="/detailed-forecast-1">
+        <Link style={{color: 'black'}} to="/detailed-forecast-1">
           <i
             className="fas fa-arrow-right"
             onClick={() => props.setIndex(1)}
