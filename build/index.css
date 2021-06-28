@@ -151,10 +151,13 @@ form input:focus {
 .nav-link {
   color: gray;
 }
-.nav-link-focused {
+.active {
   border-bottom: 1px solid orangered;
   font-weight: bolder;
   color: black;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .current-weather-div {
